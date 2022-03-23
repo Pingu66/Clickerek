@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.upgradebutton = new System.Windows.Forms.Button();
             this.buttonLevelTextBox = new System.Windows.Forms.TextBox();
+            this.A1AmmountTextBox = new System.Windows.Forms.TextBox();
+            this.A1UpgradeAmmount = new System.Windows.Forms.Button();
+            this.A1UpgradeInterval = new System.Windows.Forms.Button();
+            this.A1Label = new System.Windows.Forms.Label();
+            this.A1IntervalTextBox = new System.Windows.Forms.TextBox();
+            this.A1Timer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -71,11 +79,76 @@
             this.buttonLevelTextBox.Size = new System.Drawing.Size(100, 23);
             this.buttonLevelTextBox.TabIndex = 3;
             // 
+            // A1AmmountTextBox
+            // 
+            this.A1AmmountTextBox.Location = new System.Drawing.Point(113, 6);
+            this.A1AmmountTextBox.Name = "A1AmmountTextBox";
+            this.A1AmmountTextBox.ReadOnly = true;
+            this.A1AmmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.A1AmmountTextBox.TabIndex = 4;
+            this.A1AmmountTextBox.Text = "0";
+            // 
+            // A1UpgradeAmmount
+            // 
+            this.A1UpgradeAmmount.Location = new System.Drawing.Point(219, 6);
+            this.A1UpgradeAmmount.Name = "A1UpgradeAmmount";
+            this.A1UpgradeAmmount.Size = new System.Drawing.Size(84, 64);
+            this.A1UpgradeAmmount.TabIndex = 5;
+            this.A1UpgradeAmmount.Text = "Ulepsz Ilośc";
+            this.A1UpgradeAmmount.UseVisualStyleBackColor = true;
+            // 
+            // A1UpgradeInterval
+            // 
+            this.A1UpgradeInterval.Location = new System.Drawing.Point(415, 9);
+            this.A1UpgradeInterval.Name = "A1UpgradeInterval";
+            this.A1UpgradeInterval.Size = new System.Drawing.Size(89, 64);
+            this.A1UpgradeInterval.TabIndex = 6;
+            this.A1UpgradeInterval.Text = "Ulepsz częstotliwośc";
+            this.A1UpgradeInterval.UseVisualStyleBackColor = true;
+            this.A1UpgradeInterval.Click += new System.EventHandler(this.A1UpgradeInterval_Click);
+            // 
+            // A1Label
+            // 
+            this.A1Label.AutoSize = true;
+            this.A1Label.Location = new System.Drawing.Point(12, 9);
+            this.A1Label.Name = "A1Label";
+            this.A1Label.Size = new System.Drawing.Size(84, 15);
+            this.A1Label.TabIndex = 7;
+            this.A1Label.Text = "AutoUpgrade1";
+            // 
+            // A1IntervalTextBox
+            // 
+            this.A1IntervalTextBox.Location = new System.Drawing.Point(309, 9);
+            this.A1IntervalTextBox.Name = "A1IntervalTextBox";
+            this.A1IntervalTextBox.ReadOnly = true;
+            this.A1IntervalTextBox.Size = new System.Drawing.Size(100, 23);
+            this.A1IntervalTextBox.TabIndex = 8;
+            this.A1IntervalTextBox.Text = "0";
+            // 
+            // A1Timer
+            // 
+            this.A1Timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(334, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "/min";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.A1IntervalTextBox);
+            this.Controls.Add(this.A1Label);
+            this.Controls.Add(this.A1UpgradeInterval);
+            this.Controls.Add(this.A1UpgradeAmmount);
+            this.Controls.Add(this.A1AmmountTextBox);
             this.Controls.Add(this.buttonLevelTextBox);
             this.Controls.Add(this.upgradebutton);
             this.Controls.Add(this.label1);
@@ -93,5 +166,12 @@
         private Label label1;
         private Button upgradebutton;
         private TextBox buttonLevelTextBox;
+        private TextBox A1AmmountTextBox;
+        private Button A1UpgradeAmmount;
+        private Button A1UpgradeInterval;
+        private Label A1Label;
+        private TextBox A1IntervalTextBox;
+        private System.Windows.Forms.Timer A1Timer;
+        private Label label2;
     }
 }
