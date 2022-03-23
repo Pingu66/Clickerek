@@ -47,25 +47,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(740, 9);
+            this.label1.Location = new System.Drawing.Point(706, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 15);
+            this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "kasa: $0";
+            this.label1.Text = "Kasa: $0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // upgradebutton
             // 
-            this.upgradebutton.Location = new System.Drawing.Point(564, 390);
+            this.upgradebutton.Location = new System.Drawing.Point(564, 391);
             this.upgradebutton.Name = "upgradebutton";
             this.upgradebutton.Size = new System.Drawing.Size(75, 48);
             this.upgradebutton.TabIndex = 2;
-            this.upgradebutton.Text = "upgrade";
+            this.upgradebutton.Text = "upgrade\r\n(10$)\r\n\r\n";
             this.upgradebutton.UseVisualStyleBackColor = true;
             this.upgradebutton.Click += new System.EventHandler(this.upgradebutton_Click);
             // 
             // buttonLevelTextBox
             // 
-            this.buttonLevelTextBox.Location = new System.Drawing.Point(539, 372);
+            this.buttonLevelTextBox.Location = new System.Drawing.Point(539, 362);
             this.buttonLevelTextBox.Name = "buttonLevelTextBox";
             this.buttonLevelTextBox.Size = new System.Drawing.Size(100, 23);
             this.buttonLevelTextBox.TabIndex = 3;
