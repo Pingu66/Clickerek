@@ -63,7 +63,7 @@ namespace Clickerek
             if(Cash >= upgradeCost) {
                 A1Interval++;
                 A1IntervalTextBox.Text = A1Interval.ToString();
-                A1Timer.Interval = (60 / A1Interval) * 1000;
+                A1Timer.Interval = (60 / A1Interval) * 100;
                 if (!A1Timer.Enabled)
                     A1Timer.Enabled = true;
                 Cash -= upgradeCost;
@@ -75,6 +75,12 @@ namespace Clickerek
         {
             Cash += A1Ammount;
             //label1.Text = "Kasa: $" + cash.ToString();
+        }
+
+        private void A1UpgradeAmmount_Click(object sender, EventArgs e)
+        {
+            A1Ammount += 10;
+            A1AmmountTextBox.Text = A1Ammount.ToString();
         }
     }
 }

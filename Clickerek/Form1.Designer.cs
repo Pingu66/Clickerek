@@ -96,6 +96,7 @@
             this.A1UpgradeAmmount.TabIndex = 5;
             this.A1UpgradeAmmount.Text = "Ulepsz Ilośc";
             this.A1UpgradeAmmount.UseVisualStyleBackColor = true;
+            this.A1UpgradeAmmount.Click += new System.EventHandler(this.A1UpgradeAmmount_Click);
             // 
             // A1UpgradeInterval
             // 
