@@ -40,6 +40,14 @@
             this.A1IntervalTextBox = new System.Windows.Forms.TextBox();
             this.A1Timer = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.A2IntervalTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.A2UpgradeInterval = new System.Windows.Forms.Button();
+            this.A2Timer = new System.Windows.Forms.Timer(this.components);
+            this.A3IntervalTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.A3UpgradeInterval = new System.Windows.Forms.Button();
+            this.A3Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -139,11 +147,82 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "/min";
             // 
+            // A2IntervalTextBox
+            // 
+            this.A2IntervalTextBox.Location = new System.Drawing.Point(309, 101);
+            this.A2IntervalTextBox.Name = "A2IntervalTextBox";
+            this.A2IntervalTextBox.ReadOnly = true;
+            this.A2IntervalTextBox.Size = new System.Drawing.Size(100, 23);
+            this.A2IntervalTextBox.TabIndex = 10;
+            this.A2IntervalTextBox.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(334, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "/min";
+            // 
+            // A2UpgradeInterval
+            // 
+            this.A2UpgradeInterval.Location = new System.Drawing.Point(415, 101);
+            this.A2UpgradeInterval.Name = "A2UpgradeInterval";
+            this.A2UpgradeInterval.Size = new System.Drawing.Size(89, 61);
+            this.A2UpgradeInterval.TabIndex = 12;
+            this.A2UpgradeInterval.Text = "Ulepsz częstotliwośc";
+            this.A2UpgradeInterval.UseVisualStyleBackColor = true;
+            this.A2UpgradeInterval.Click += new System.EventHandler(this.A2UpgradeInterval_Click);
+            // 
+            // A2Timer
+            // 
+            this.A2Timer.Tick += new System.EventHandler(this.A2Timer_Tick);
+            // 
+            // A3IntervalTextBox
+            // 
+            this.A3IntervalTextBox.Location = new System.Drawing.Point(309, 185);
+            this.A3IntervalTextBox.Name = "A3IntervalTextBox";
+            this.A3IntervalTextBox.ReadOnly = true;
+            this.A3IntervalTextBox.Size = new System.Drawing.Size(100, 23);
+            this.A3IntervalTextBox.TabIndex = 13;
+            this.A3IntervalTextBox.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(334, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "/min";
+            // 
+            // A3UpgradeInterval
+            // 
+            this.A3UpgradeInterval.Location = new System.Drawing.Point(415, 185);
+            this.A3UpgradeInterval.Name = "A3UpgradeInterval";
+            this.A3UpgradeInterval.Size = new System.Drawing.Size(89, 52);
+            this.A3UpgradeInterval.TabIndex = 15;
+            this.A3UpgradeInterval.Text = "Ulepsz częstotliwośc";
+            this.A3UpgradeInterval.UseVisualStyleBackColor = true;
+            this.A3UpgradeInterval.Click += new System.EventHandler(this.A3UpgradeInterval_Click);
+            // 
+            // A3Timer
+            // 
+            this.A3Timer.Tick += new System.EventHandler(this.A3Timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Clickerek.Properties.Resources.images1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.A3UpgradeInterval);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.A3IntervalTextBox);
+            this.Controls.Add(this.A2UpgradeInterval);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.A2IntervalTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.A1IntervalTextBox);
             this.Controls.Add(this.A1Label);
@@ -174,5 +253,13 @@
         private TextBox A1IntervalTextBox;
         private System.Windows.Forms.Timer A1Timer;
         private Label label2;
+        private TextBox A2IntervalTextBox;
+        private Label label3;
+        private Button A2UpgradeInterval;
+        private System.Windows.Forms.Timer A2Timer;
+        private TextBox A3IntervalTextBox;
+        private Label label4;
+        private Button A3UpgradeInterval;
+        private System.Windows.Forms.Timer A3Timer;
     }
 }
