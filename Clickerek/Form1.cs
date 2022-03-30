@@ -24,6 +24,8 @@ namespace Clickerek
         int A2Interval;
         int A3Interval;
         int upgradeButton;
+        int A2Ammount;
+        int A3Ammount;
         
         public Form1()
         {
@@ -35,12 +37,17 @@ namespace Clickerek
             A2Interval = 0;
             A3Interval = 0;
             upgradeButton = 1;
+            A2Ammount = 50;
+            A3Ammount = 100;
             
            
             A1AmmountTextBox.Text = A1Ammount.ToString();
             A1IntervalTextBox.Text = A1Interval.ToString();
             A2IntervalTextBox.Text = A2Interval.ToString();
             A3IntervalTextBox.Text = A3Interval.ToString();
+            A2AmmountTextBox.Text = A2Ammount.ToString();
+            A3AmmountTextBox.Text = A3Ammount.ToString();
+            
             
         }
         //nabijanie kaski
@@ -88,19 +95,16 @@ namespace Clickerek
             Cash += A1Ammount;
         }
         //
-        //guzik ziekszajacy ilosc kaski zarabiajacej pasywnie
+        //guzik ziekszajacy ilosc kaski zarabiajacej pasywnie dla 1 czestotlwosci
         private void A1UpgradeAmmount_Click(object sender, EventArgs e)
         {
-            int upgradeCost2 = (int)Math.Pow(10, upgradeButton);
+            int upgradeCost2 = A1Ammount * 10;
             if (Cash >= upgradeCost2)
             {
-                upgradeButton++;
-                A1AmmountTextBox.Text = upgradeButton.ToString();
-                Cash -= upgradeCost2;
-                string nextUpgradeCost = "($" + Math.Pow(10, upgradeButton).ToString() + ")";
-                upgradebutton.Text = "Upgrade\n" + nextUpgradeCost;
                 A1Ammount += 10;
                 A1AmmountTextBox.Text = A1Ammount.ToString();
+                Cash -= upgradeCost2;
+               
             }
            
         }
@@ -124,7 +128,7 @@ namespace Clickerek
         //zegarek do drugiej kaski pasywnej 
         private void A2Timer_Tick(object sender, EventArgs e)
         {
-            Cash += A1Ammount;
+            Cash += A2Ammount;
         }
         //
         //przycisk zarabiajacy kaske najszybciej + jest najdrozszy
@@ -146,7 +150,33 @@ namespace Clickerek
         //zegarek do trzeciej kaski pasywnej 
         private void A3Timer_Tick(object sender, EventArgs e)
         {
-            Cash += A1Ammount;
+            Cash += A3Ammount;
+        }
+        //
+        //ulepsza druga  czestotliwosc
+        private void A2UpgradeAmmount_Click(object sender, EventArgs e)
+        {
+            int upgradeCost2 = A2Ammount;
+            if (Cash >= upgradeCost2)
+            {
+                
+                A2Ammount += 50;
+                A2AmmountTextBox.Text = A2Ammount.ToString();
+                Cash -= upgradeCost2;
+            }
+        }
+        //
+        //ulepsza 3 czestotliwosc
+        private void A3UpgradeAmmount_Click(object sender, EventArgs e)
+        {
+            int upgradeCost2 = A3Ammount * 10;
+            if (Cash >= upgradeCost2)
+            {
+                
+                A3Ammount += 100;
+                A3AmmountTextBox.Text = A3Ammount.ToString();
+                Cash -= upgradeCost2;
+            }
         }
     }   //
     

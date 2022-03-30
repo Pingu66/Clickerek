@@ -48,6 +48,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.A3UpgradeInterval = new System.Windows.Forms.Button();
             this.A3Timer = new System.Windows.Forms.Timer(this.components);
+            this.A2AmmountTextBox = new System.Windows.Forms.TextBox();
+            this.A2label = new System.Windows.Forms.Label();
+            this.A2UpgradeAmmount = new System.Windows.Forms.Button();
+            this.A3label = new System.Windows.Forms.Label();
+            this.A3AmmountTextBox = new System.Windows.Forms.TextBox();
+            this.A3UpgradeAmmount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -211,12 +217,74 @@
             // 
             this.A3Timer.Tick += new System.EventHandler(this.A3Timer_Tick);
             // 
+            // A2AmmountTextBox
+            // 
+            this.A2AmmountTextBox.Location = new System.Drawing.Point(113, 89);
+            this.A2AmmountTextBox.Name = "A2AmmountTextBox";
+            this.A2AmmountTextBox.ReadOnly = true;
+            this.A2AmmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.A2AmmountTextBox.TabIndex = 16;
+            this.A2AmmountTextBox.Text = "0";
+            // 
+            // A2label
+            // 
+            this.A2label.AutoSize = true;
+            this.A2label.Location = new System.Drawing.Point(12, 92);
+            this.A2label.Name = "A2label";
+            this.A2label.Size = new System.Drawing.Size(84, 15);
+            this.A2label.TabIndex = 17;
+            this.A2label.Text = "AutoUpgrade2";
+            // 
+            // A2UpgradeAmmount
+            // 
+            this.A2UpgradeAmmount.Location = new System.Drawing.Point(219, 86);
+            this.A2UpgradeAmmount.Name = "A2UpgradeAmmount";
+            this.A2UpgradeAmmount.Size = new System.Drawing.Size(84, 56);
+            this.A2UpgradeAmmount.TabIndex = 18;
+            this.A2UpgradeAmmount.Text = "Ulepsz ilośc";
+            this.A2UpgradeAmmount.UseVisualStyleBackColor = true;
+            this.A2UpgradeAmmount.Click += new System.EventHandler(this.A2UpgradeAmmount_Click);
+            // 
+            // A3label
+            // 
+            this.A3label.AutoSize = true;
+            this.A3label.Location = new System.Drawing.Point(12, 185);
+            this.A3label.Name = "A3label";
+            this.A3label.Size = new System.Drawing.Size(84, 15);
+            this.A3label.TabIndex = 19;
+            this.A3label.Text = "AutoUpgrade3";
+            // 
+            // A3AmmountTextBox
+            // 
+            this.A3AmmountTextBox.Location = new System.Drawing.Point(113, 182);
+            this.A3AmmountTextBox.Name = "A3AmmountTextBox";
+            this.A3AmmountTextBox.ReadOnly = true;
+            this.A3AmmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.A3AmmountTextBox.TabIndex = 20;
+            this.A3AmmountTextBox.Text = "0";
+            // 
+            // A3UpgradeAmmount
+            // 
+            this.A3UpgradeAmmount.Location = new System.Drawing.Point(219, 182);
+            this.A3UpgradeAmmount.Name = "A3UpgradeAmmount";
+            this.A3UpgradeAmmount.Size = new System.Drawing.Size(84, 55);
+            this.A3UpgradeAmmount.TabIndex = 21;
+            this.A3UpgradeAmmount.Text = "Ulepsz ilośc";
+            this.A3UpgradeAmmount.UseVisualStyleBackColor = true;
+            this.A3UpgradeAmmount.Click += new System.EventHandler(this.A3UpgradeAmmount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Clickerek.Properties.Resources.images1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.A3UpgradeAmmount);
+            this.Controls.Add(this.A3AmmountTextBox);
+            this.Controls.Add(this.A3label);
+            this.Controls.Add(this.A2UpgradeAmmount);
+            this.Controls.Add(this.A2label);
+            this.Controls.Add(this.A2AmmountTextBox);
             this.Controls.Add(this.A3UpgradeInterval);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.A3IntervalTextBox);
@@ -261,5 +329,11 @@
         private Label label4;
         private Button A3UpgradeInterval;
         private System.Windows.Forms.Timer A3Timer;
+        private TextBox A2AmmountTextBox;
+        private Label A2label;
+        private Button A2UpgradeAmmount;
+        private Label A3label;
+        private TextBox A3AmmountTextBox;
+        private Button A3UpgradeAmmount;
     }
 }
