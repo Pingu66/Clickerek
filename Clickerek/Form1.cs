@@ -43,13 +43,13 @@ namespace Clickerek
             A3IntervalTextBox.Text = A3Interval.ToString();
             
         }
-
+        //nabijanie kaski
         private void button1_Click(object sender, EventArgs e)
         {
             Cash += (int)Math.Pow(10, buttonLevel-1);
-           // label1.Text = "Kasa: $"+cash.ToString();
         }
-
+        //
+        //zwiaksza ilosc kaski na klikniecie
         private void upgradebutton_Click(object sender, EventArgs e)
         {
             int upgradeCost = (int)Math.Pow(10, buttonLevel);
@@ -58,17 +58,18 @@ namespace Clickerek
                 buttonLevel++;
                 buttonLevelTextBox.Text = buttonLevel.ToString();
                 Cash -= upgradeCost;
-               // label1.Text = "Kasa: $" + cash.ToString();
                 string nextUpgradeCost = "($" + Math.Pow(10,buttonLevel).ToString() + ")";
                 upgradebutton.Text = "Upgrade\n" + nextUpgradeCost;
             }
         }
-
+        //
+        // useless
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
+        //
+        //przycisk zwiekszajacy zarabianie kaski paswyne 
         private void A1UpgradeInterval_Click(object sender, EventArgs e)
         {
             int upgradeCost = A1Interval * 100;
@@ -79,16 +80,15 @@ namespace Clickerek
                 if (!A1Timer.Enabled)
                     A1Timer.Enabled = true;
                 Cash -= upgradeCost;
-                //label1.Text = "Kasa: $" + cash.ToString();
             }
         }
-
+        //timer do kaski
         private void timer1_Tick(object sender, EventArgs e)
         {
             Cash += A1Ammount;
-            //label1.Text = "Kasa: $" + cash.ToString();
         }
-
+        //
+        //guzik ziekszajacy ilosc kaski zarabiajacej pasywnie
         private void A1UpgradeAmmount_Click(object sender, EventArgs e)
         {
             int upgradeCost2 = (int)Math.Pow(10, upgradeButton);
@@ -104,7 +104,8 @@ namespace Clickerek
             }
            
         }
-
+        //
+        //przycisk ktory zarabia kaske szybciej i jest drozszy
         private void A2UpgradeInterval_Click(object sender, EventArgs e)
         {
             int upgradeCost = A2Interval * 1000;
@@ -119,12 +120,14 @@ namespace Clickerek
                 
             }
         }
-
+        //
+        //zegarek do drugiej kaski pasywnej 
         private void A2Timer_Tick(object sender, EventArgs e)
         {
             Cash += A1Ammount;
         }
-
+        //
+        //przycisk zarabiajacy kaske najszybciej + jest najdrozszy
         private void A3UpgradeInterval_Click(object sender, EventArgs e)
         {
             int upgradeCost = A3Interval * 10000;
@@ -139,10 +142,12 @@ namespace Clickerek
 
             }
         }
-
+        //
+        //zegarek do trzeciej kaski pasywnej 
         private void A3Timer_Tick(object sender, EventArgs e)
         {
             Cash += A1Ammount;
         }
-    }
+    }   //
+    
 }
