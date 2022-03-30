@@ -81,7 +81,6 @@ namespace Clickerek
         {
             A1Ammount += 10;
             A1AmmountTextBox.Text = A1Ammount.ToString();
-            //s
         }
     }
 }
